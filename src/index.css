@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Jura";
+  src: url('/fonts/Jura-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+}
+
+
+@keyframes slide-seamless {
+  0% {
+    transform: translateX(0) translateY(-50%);
+  }
+  100% {
+    transform: translateX(-1798px) translateY(-50%);
+  }
+}
+
+.animate-slide-seamless {
+  animation: slide-seamless 15s linear infinite;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
