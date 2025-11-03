@@ -14,10 +14,10 @@ import JoinNowButton from '../components/join_now_button';
 
 const AboutUs: React.FC = () => {
   return (
-    <section className="relative w-full bg-[#0f6e5fff] pt-20 overflow-visible min-h-screen">
-      {/* ===== MOBILE VIEW ===== */}
-      <div className="flex flex-col items-center text-center lg:hidden relative z-10">
-        {/* ABOUT US Title */}
+    <section className="relative w-full bg-[#0f6e5fff] pt-20 overflow-x-hidden overflow-visible md:overflow-visible min-h-screen">
+
+      {/* MOBILE VIEW */}
+      <div className="flex flex-col items-center text-center md:hidden relative z-10">
         <h1
           className="text-4xl sm:text-5xl font-bold text-white mb-6 relative z-20"
           style={{ fontFamily: 'Jura, sans-serif' }}
@@ -25,33 +25,25 @@ const AboutUs: React.FC = () => {
           ABOUT US
         </h1>
 
-        {/* Paragraph */}
-        <div className="max-w-[85%] sm:max-w-[550px] mb-6 text-[14px] sm:text-[15px] leading-relaxed relative z-20 text-white">
+        <div className="w-full px-4 sm:px-6 mb-6 text-[14px] sm:text-[15px] leading-relaxed relative z-20 text-white">
           <AboutUsParagraph />
         </div>
 
-        {/* Queen2 Image */}
         <img
           src={Queen2}
           alt="Queen 2"
-          className="w-[380px] sm:w-[480px] object-contain mb-4 self-start ml-4 relative z-10"
+          className="w-[380px] sm:w-[480px] object-contain mb-4 relative z-10"
         />
-
-        {/* Leaf Image */}
         <img
           src={Leaf}
           alt="Leaf"
-          className="absolute right-12 bottom-[120px] w-[100px] h-[180px] object-contain z-10"
+          className="absolute bottom-[130px] right-[50px] w-[100px] h-[180px] object-contain z-10"
         />
-
-        {/* Halftree Image */}
         <img
           src={Halftree}
           alt="Half Tree"
           className="absolute right-0 top-0 h-full w-auto object-cover z-0"
         />
-
-        {/* Bottom black bar */}
         <img
           src={BottomBlack}
           alt=""
@@ -59,9 +51,77 @@ const AboutUs: React.FC = () => {
         />
       </div>
 
-      {/* ===== DESKTOP / TABLET VIEW ===== */}
-      <div className="hidden lg:block relative w-full h-[650px] lg:h-[600px] xl:h-[850px] 2xl:h-[1200px]">
-        {/* ABOUT US Title */}
+      {/* TABLET / LAPTOP VIEW */}
+      <div className="hidden md:flex lg:hidden flex-col items-center text-center relative w-full z-10">
+        <h1
+          className="text-[60px] text-white font-bold mb-6"
+          style={{ fontFamily: 'Jura, sans-serif' }}
+        >
+          ABOUT US
+        </h1>
+
+        <div className="w-full px-4 sm:px-6 mb-6">
+          <AboutUsParagraph />
+        </div>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-6">
+          <JoinNowButton />
+          <div className="flex items-center space-x-4">
+            <a
+              href="https://t.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
+            >
+              <img src={TelegramIcon} alt="Telegram" className="w-[60px] h-[60px]" />
+            </a>
+            <button
+              type="button"
+              className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none"
+            >
+              <img src={Icon1} alt="Icon 1" className="w-[60px] h-[60px]" />
+            </button>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
+            >
+              <img src={XIcon} alt="X (Twitter)" className="w-[60px] h-[60px]" />
+            </a>
+            <button
+              type="button"
+              className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none"
+            >
+              <img src={Icon2} alt="Icon 2" className="w-[60px] h-[60px]" />
+            </button>
+          </div>
+        </div>
+
+        <img
+          src={Queen2}
+          alt="Queen 2"
+          className="w-[580px] h-[580px] object-contain mb-10"
+        />
+        <img
+          src={Halftree}
+          alt="Half Tree"
+          className="absolute right-0 top-0 h-full w-auto object-cover z-0"
+        />
+        <img
+          src={Flowerbush}
+          alt="Flower Bush"
+          className="absolute bottom-0 left-0 w-[320px] h-[280px] object-contain"
+        />
+        <img
+          src={BottomBlack}
+          alt=""
+          className="absolute bottom-0 left-0 w-full right-0 h-[200px] object-fill"
+        />
+      </div>
+
+      {/* DESKTOP VIEW */}
+      <div className="hidden lg:block relative w-full h-[650px] lg:h-[600px] xl:h-[970px] 2xl:h-[1200px]">
         <h1
           className="absolute top-[30px] left-[220px] text-[80px] xl:text-[90px] font-bold text-white"
           style={{ fontFamily: 'Jura, sans-serif' }}
@@ -69,88 +129,53 @@ const AboutUs: React.FC = () => {
           ABOUT US
         </h1>
 
-        {/* Paragraph */}
         <div className="absolute top-[180px] left-[120px] max-w-[700px] xl:max-w-[750px]">
           <AboutUsParagraph />
         </div>
 
-        {/* Telegram + Icon1 + XIcon + Icon2 */}
         <div className="absolute top-[420px] left-[320px] flex items-center space-x-4">
-          <a
-            href="https://t.me/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
-          >
+          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1">
             <img src={TelegramIcon} alt="Telegram" className="w-[70px] h-[70px]" />
           </a>
-
-          <button
-            type="button"
-            className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none"
-          >
+          <button type="button" className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none">
             <img src={Icon1} alt="Icon 1" className="w-[70px] h-[70px]" />
           </button>
-
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
-          >
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1">
             <img src={XIcon} alt="X (Twitter)" className="w-[70px] h-[70px]" />
           </a>
-
-          <button
-            type="button"
-            className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none"
-          >
+          <button type="button" className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none">
             <img src={Icon2} alt="Icon 2" className="w-[70px] h-[70px]" />
           </button>
         </div>
 
-        {/* Join Now Button */}
         <div className="absolute top-[540px] left-[480px] transform -translate-x-1/2 z-10">
           <JoinNowButton />
         </div>
 
-        {/* Flowerbush */}
         <img
           src={Flowerbush}
           alt="Flower Bush"
-          className="absolute -bottom-[100px] xl:-bottom-[0px] left-[0px] w-[360px] h-[320px] object-contain"
+          className="absolute -bottom-[100px] xl:-bottom-[0px] xl:-left-[3px] left-[0px] w-[360px] h-[320px] xl:w-[480px] xl:h-[420px] object-contain"
         />
-
-        {/* Half Tree */}
         <img
           src={Halftree}
           alt="Half Tree"
-          className="absolute -bottom-20 xl:bottom-[50px] right-0 w-[500px] h-[700px] object-cover z-0"
+          className="absolute -bottom-20 xl:bottom-[40px] right-0 w-[500px] h-[700px] xl:w-[620px] xl:h-[950px] object-cover z-0"
         />
-
-        {/* Leaf */}
         <img
           src={Leaf}
           alt="Leaf"
-          className="absolute bottom-[60px] xl:bottom-[70px] right-[100px] w-[130px] h-[230px] object-contain"
+          className="absolute bottom-[60px] xl:bottom-[260px] right-[100px] xl:right-[200px] w-[130px] h-[230px] object-contain"
         />
-
-        {/* Queen2 */}
         <img
           src={Queen2}
           alt="Queen 2"
-          className="absolute w-[580px] h-[580px] object-contain"
-          style={{
-            left: '1050px',
-            top: '120px',
-          }}
+          className="absolute w-[580px] h-[580px] xl:w-[720px] xl:h-[820px] object-contain left-[1050px] xl:left-[1200px] top-[120px] xl:top-[110px]"
         />
-
-        {/* Bottom black bar */}
         <img
           src={BottomBlack}
           alt=""
-          className="absolute -bottom-[130px] xl:-bottom-[0px] left-0 w-full xl:h-[225px] h-[260px] object-fill"
+          className="absolute -bottom-[130px] xl:bottom-0 left-0 w-full xl:h-[225px] h-[260px] object-fill"
         />
       </div>
     </section>
