@@ -17,37 +17,37 @@ const AboutUs: React.FC = () => {
     <section className="relative w-full bg-[#0f6e5fff] pt-20 overflow-x-hidden overflow-visible md:overflow-visible min-h-screen">
 
       {/* MOBILE VIEW */}
-      <div className="flex flex-col items-center text-center md:hidden relative z-10">
+      <div className="flex flex-col items-center text-center md:hidden relative z-10 h-screen overflow-hidden">
         <h1
-          className="text-4xl sm:text-5xl font-bold text-white mb-6 relative z-20"
+          className="text-3xl sm:text-5xl font-bold text-white mb-2 relative z-20"
           style={{ fontFamily: 'Jura, sans-serif' }}
         >
           ABOUT US
         </h1>
 
-        <div className="w-full px-4 sm:px-6 mb-6 text-[14px] sm:text-[15px] leading-relaxed relative z-20 text-white">
+        <div className="w-full px-4 sm:px-6 mb-6 text-[20px] sm:text-[20px] leading-relaxed relative z-20 text-white">
           <AboutUsParagraph />
         </div>
 
         <img
           src={Queen2}
           alt="Queen 2"
-          className="w-[380px] sm:w-[480px] object-contain mb-4 relative z-10"
+          className="absolute bottom-[25px] left-[1px] w-[400px] sm:w-[480px] h-auto object-contain z-10"
         />
         <img
           src={Leaf}
           alt="Leaf"
-          className="absolute bottom-[130px] right-[50px] w-[100px] h-[180px] object-contain z-10"
+          className="absolute bottom-[180px] right-[40px] w-[80px] h-[80px] object-contain z-10"
         />
         <img
           src={Halftree}
           alt="Half Tree"
-          className="absolute right-0 top-0 h-full w-auto object-cover z-0"
+          className="absolute bottom-0 right-0 w-auto h-[960px] sm:h-[400px] object-cover z-0"
         />
         <img
           src={BottomBlack}
           alt=""
-          className="absolute bottom-0 left-0 w-full h-[200px] object-fill z-10"
+          className="absolute bottom-0 left-0 w-full h-[120px] object-fill z-10"
         />
       </div>
 

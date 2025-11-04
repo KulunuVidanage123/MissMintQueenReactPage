@@ -9,6 +9,7 @@ export default {
       screens: {
         sm: '640px',
         md: '768px',
+        // tablet: { min: '768px', max: '1023px' },
         lg: '1700px', 
         xl: '1920px',
       },
