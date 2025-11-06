@@ -6,6 +6,7 @@ import AboutUs from './Sections/AboutUs';
 import HeroTitle from './Sections/HeroTitle';
 import Homepage from './Sections/Homepage';
 import Cards from './Sections/Cards';
+import Footer from './Sections/Footer';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
       <HeroTitle />
       <Homepage />
       <Cards />
+      <Footer />
       {/* Other sections can go below */}
     </>
   );

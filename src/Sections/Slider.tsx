@@ -1,20 +1,22 @@
 // src/Sections/Slider.tsx
 import React from 'react';
 import BGImage1 from '../assets/BGImage1.png';
+import BGImage1mobile from '../assets/BGImage1mobile.png'; 
 import Queen1 from '../assets/Queen1.png';
 import QuestText from '../assets/QuestText.png';
-import Social_Icons from '../components/Social_Icons'; 
+import Social_Icons from '../components/Social_Icons';
 import Rectangle_Shape from '../components/Rectangle_Shape';
 import ParagraphText from '../components/ParagraphText';
 
 const Slider: React.FC = () => {
   return (
-    <section
-      className="w-full max-w-full h-auto lg:h-[730px] xl:h-[960px] bg-cover bg-center bg-no-repeat relative flex flex-col lg:block"
-      style={{ backgroundImage: `url(${BGImage1})` }}
-    >
+    <section className="w-full max-w-full h-auto lg:h-[730px] xl:h-[960px] bg-cover bg-center bg-no-repeat relative flex flex-col lg:block">
+      
       {/* Desktop Layout */}
-      <div className="hidden lg:block">
+      <div
+        className="hidden lg:block w-full h-[730px] xl:h-[960px] bg-cover bg-center bg-no-repeat relative"
+        style={{ backgroundImage: `url(${BGImage1})` }}
+      >
         <img
           src={Queen1}
           alt="Queen"
@@ -30,7 +32,7 @@ const Slider: React.FC = () => {
           <ParagraphText />
         </div>
 
-        <div 
+        <div
           className="absolute xl:top-[650px] lg:bottom-[160px] xl:left-[1100px]"
           style={{
             right: '350px',
@@ -42,7 +44,10 @@ const Slider: React.FC = () => {
       </div>
 
       {/* Mobile Layout */}
-      <div className="flex flex-col lg:hidden items-center justify-center text-center px-6 py-10 space-y-8">
+      <div
+        className="flex flex-col lg:hidden items-center justify-center text-center px-6 py-10 space-y-8 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${BGImage1mobile})` }} 
+      >
         <img
           src={QuestText}
           alt="Quest Text"

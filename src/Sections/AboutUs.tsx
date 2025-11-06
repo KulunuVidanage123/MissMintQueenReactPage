@@ -3,6 +3,7 @@ import React from 'react';
 import Halftree from '../assets/Halftree.png';
 import Queen2 from '../assets/Queen2.png';
 import Flowerbush from '../assets/Flowerbush.png';
+import Flowerbush2 from '../assets/Flowerbush2.png';
 import Leaf from '../assets/leaf.png';
 import BottomBlack from '../assets/bottomblack.png';
 import AboutUsParagraph from '../components/AboutUsParagraph';
@@ -156,6 +157,11 @@ const AboutUs: React.FC = () => {
           src={Flowerbush}
           alt="Flower Bush"
           className="absolute -bottom-[100px] xl:-bottom-[0px] xl:-left-[3px] left-[0px] w-[360px] h-[320px] xl:w-[480px] xl:h-[420px] object-contain"
+        />
+        <img
+          src={Flowerbush2}
+          alt="Flower Bush"
+          className="absolute -bottom-[150px] xl:-bottom-[40px] xl:left-[320px] left-[230px] w-[300px] h-[320px] xl:w-[380px] xl:h-[400px] object-contain"
         />
         <img
           src={Halftree}

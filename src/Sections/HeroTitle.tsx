@@ -1,19 +1,22 @@
-// src/Sections/HeroTitle.tsx
 import React from 'react';
 import TopBlack from '../assets/topblack.png';
 import BGImage2 from '../assets/BGImage2.png';
+import BGImage2mobile from '../assets/BGImage2mobile.png'; 
 import HeroTitleContent from '../components/HeroTitleContent';
 import Rectangle_Shape from '../components/Rectangle_Shape';
 
 const HeroTitle: React.FC = () => {
   return (
     <section className="relative w-full h-[80vh] md:h-[60vh] lg:h-[60vh] xl:h-[80vh] 2xl:h-[90vh] overflow-visible z-20">
-      {/* Mobile */}
-
-      {/* Background image */}
+      {/* Background for desktop */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 hidden sm:block"
         style={{ backgroundImage: `url(${BGImage2})` }}
+      />
+      {/* Background for mobile */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 block sm:hidden"
+        style={{ backgroundImage: `url(${BGImage2mobile})` }}
       />
 
       {/* Top black bar */}
@@ -30,7 +33,7 @@ const HeroTitle: React.FC = () => {
         </div>
       </div>
 
-      {/* Rectangle_Shape — now allowed to overlap next section */}
+      {/* Rectangle Shape */}
       <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 z-[30] pointer-events-none">
         <Rectangle_Shape />
       </div>

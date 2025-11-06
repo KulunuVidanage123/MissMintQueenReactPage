@@ -1,5 +1,6 @@
 import React from 'react';
-import BGImage2 from '../assets/BGImage2.png';
+import BGImage4 from '../assets/BGImage4.png';
+import BGImage4mobile from '../assets/BGImage4mobile.png'; 
 import topblack2 from '../assets/topblack2.png';
 import mobilebottom from '../assets/mobilebottom.png';
 import CardContent from '../components/CardContent';
@@ -9,30 +10,30 @@ import flower3 from '../assets/flower3.png';
 
 const Cards: React.FC = () => {
   return (
-    <section
-      className="relative w-full overflow-hidden min-h-[28vh] md:min-h-[70vh] tablet:min-h-[120vh]"
-      style={{
-        backgroundImage: `url(${BGImage2})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-      {/* top image */}
+    <section className="relative w-full overflow-hidden min-h-[65vh] md:min-h-[70vh]">
+      {/* Mobile Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+        style={{ backgroundImage: `url(${BGImage4mobile})` }}
+      />
+
+      {/* Desktop/Tablet Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
+        style={{ backgroundImage: `url(${BGImage4})` }}
+      />
+
+      {/* Top black image */}
       <img
         src={topblack2}
         alt=""
-        className="absolute -top-16 left-0 w-full h-auto md:block hidden"
+        className="absolute -top-16 left-0 w-full h-auto hidden md:block"
         style={{ maxHeight: '200px' }}
       />
 
       {/* Title */}
       <h1
-        className="absolute 
-                    top-16 tablet:top-32 lg:top-40    /* increased padding for tablet & laptop */
-                    md:left-1/2 md:transform md:-translate-x-1/2 
-                    text-black font-bold z-10 text-center
-                    left-0 right-0 md:static md:translate-x-0"
+        className="absolute top-16 md:top-26 left-1/2 transform -translate-x-1/2 text-black font-bold z-10 text-center"
         style={{
           fontFamily: 'Jura, sans-serif',
           fontSize: 'clamp(32px, 6vw, 70px)',
@@ -41,41 +42,37 @@ const Cards: React.FC = () => {
         HOW TO BUY
       </h1>
 
-      {/* Card container */}
-      <div
-        className="relative z-10 md:absolute md:top-[40%] w-full 
-                    mt-[220px] md:mt-0"
-      >
+      {/* Cards */}
+      <div className="relative z-10 pt-24 md:pt-0 md:absolute md:top-[40%] md:w-full">
         <CardContent />
       </div>
 
-      {/* Mobile-only flower images */}
-      <div className="relative flex flex-col items-center justify-center mt-20 md:hidden">
+      <div className="relative flex flex-col items-center justify-center mt-24 md:hidden">
+        {/* Bottom center flower */}
         <img
           src={flower3}
-          alt=""
-          className="absolute -bottom-[160px] left-1/2 transform -translate-x-1/2 w-[240px] h-auto object-contain"
+          alt="Flower3"
+          className="absolute -bottom-[160px] left-1/2 transform -translate-x-1/2 w-[240px] h-auto object-contain max-[440px]:w-[180px]"
         />
 
-        {/* Flower1 and Flower2 below */}
-        <div className="flex justify-between w-full px-[1px] mt-[1px]">
+        {/* Left and right flowers */}
+        <div className="flex justify-between w-full px-[12px] mt-[1px]">
           <img
             src={flower1}
-            alt=""
-            className="w-[220px] h-auto object-contain"
+            alt="Flower1"
+            className="w-[220px] h-auto object-contain max-[440px]:w-[160px]"
           />
           <img
             src={flower2}
-            alt=""
-            className="w-[220px] h-auto object-contain"
+            alt="Flower2"
+            className="w-[220px] h-auto object-contain max-[440px]:w-[160px]"
           />
         </div>
       </div>
 
-      {/* Mobile bottom image */}
       <img
         src={mobilebottom}
-        alt=""
+        alt="Mobile Bottom"
         className="w-full h-auto object-cover mt-8 md:hidden"
       />
     </section>
