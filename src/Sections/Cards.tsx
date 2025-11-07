@@ -2,7 +2,6 @@ import React from 'react';
 import BGImage4 from '../assets/BGImage4.png';
 import BGImage4mobile from '../assets/BGImage4mobile.png'; 
 import topblack2 from '../assets/topblack2.png';
-import mobilebottom from '../assets/mobilebottom.png';
 import CardContent from '../components/CardContent';
 import flower1 from '../assets/flower1.png';
 import flower2 from '../assets/flower2.png';
@@ -12,7 +11,7 @@ const Cards: React.FC = () => {
   return (
     <section 
       id="how-to-buy"
-      className="relative w-full overflow-hidden min-h-[65vh] md:min-h-[70vh]">
+      className="relative w-full overflow-hidden min-h-[150vh] md:min-h-[70vh]">
       {/* Mobile Background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
@@ -35,7 +34,7 @@ const Cards: React.FC = () => {
 
       {/* Title */}
       <h1
-        className="absolute top-16 md:top-26 left-1/2 transform -translate-x-1/2 text-black font-bold z-10 text-center"
+        className="absolute top-16 md:top-26 left-1/2 transform -translate-x-1/2 text-black font-bold z-10 text-center whitespace-nowrap md:whitespace-normal"
         style={{
           fontFamily: 'Jura, sans-serif',
           fontSize: 'clamp(32px, 6vw, 70px)',
@@ -45,7 +44,7 @@ const Cards: React.FC = () => {
       </h1>
 
       {/* Cards */}
-      <div className="relative z-10 pt-24 md:pt-0 md:absolute md:top-[40%] md:w-full">
+      <div className="relative z-10 pt-24 mt-16 md:mt-0 md:pt-0 md:absolute md:top-[40%] md:w-full">
         <CardContent />
       </div>
 
@@ -54,7 +53,7 @@ const Cards: React.FC = () => {
         <img
           src={flower3}
           alt="Flower3"
-          className="absolute -bottom-[160px] left-1/2 transform -translate-x-1/2 w-[240px] h-auto object-contain max-[440px]:w-[180px]"
+          className="absolute -bottom-[100px] left-1/2 transform -translate-x-1/2 w-[240px] h-auto object-contain max-[440px]:w-[180px]"
         />
 
         {/* Left and right flowers */}
@@ -71,14 +70,9 @@ const Cards: React.FC = () => {
           />
         </div>
       </div>
-
-      <img
-        src={mobilebottom}
-        alt="Mobile Bottom"
-        className="w-full h-auto object-cover mt-8 md:hidden"
-      />
+      
     </section>
   );
 };
 
-export default Cards;
+export default Cards;    

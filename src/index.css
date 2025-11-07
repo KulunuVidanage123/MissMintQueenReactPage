@@ -26,3 +26,9 @@
   align-items: center;
   position: absolute;
 }
+
+@media (max-width: 1420px) and (min-width: 1024px) {
+  #how-to-buy {
+    min-height: 120vh !important;
+  }
+}
