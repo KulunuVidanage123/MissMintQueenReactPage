@@ -18,7 +18,6 @@ const App: React.FC = () => {
       <Homepage />
       <Cards />
       <Footer />
-      {/* Other sections can go below */}
     </>
   );
 };

@@ -1,63 +1,55 @@
 // src/components/Footer.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BGImage5 from '../assets/BGImage5.png';
+import FooterBG from '../assets/FooterBG.png';
 import FooterContent from '../components/FooterContent';
-import TelegramIconImg from '../assets/TelegramIcon.png';
-import Icon1 from '../assets/icon1.png';
-import Icon2 from '../assets/icon2.png'; 
-import XIcon from '../assets/XIcon.png';
 
 const Footer: React.FC = () => {
+  const [bgImage, setBgImage] = useState<string>(BGImage5);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        // Mobile view
+        setBgImage(FooterBG);
+      } else {
+        // Desktop and tablet view
+        setBgImage(BGImage5);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <section
-      className="h-[55vh] bg-cover bg-center flex flex-col items-center justify-start pt-4"
-      style={{ backgroundImage: `url(${BGImage5})` }}
-    >
-      <FooterContent />
-      <div className="flex items-center space-x-5 mt-4">
-        {/* Telegram Icon */}
-        <a
-          href="https://t.me/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
-        >
-          <img
-            src={TelegramIconImg}
-            alt="Telegram"
-            className="w-[55px] h-[55px] sm:w-[73px] sm:h-[73px]"
-          />
-        </a>
+    <>
+      <style>
+        {`
+          @media (max-width: 767px) {
+            .footer-section {
+              height: 60vh !important;
+            }
+          }
+          @media (min-width: 768px) and (max-width: 1023px) {
+            .footer-section {
+              height: 68vh !important;
+            }
+          }
+        `}
+      </style>
 
-        {/* Icon1 */}
-        <img
-          src={Icon1}
-          alt="Icon 1"
-          className="w-[55px] h-[55px] sm:w-[73px] sm:h-[73px]"
-        />
-
-        {/* X (Twitter) Icon */}
-        <a
-          href="https://twitter.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
-        >
-          <img
-            src={XIcon}
-            alt="X (Twitter)"
-            className="w-[55px] h-[55px] sm:w-[73px] sm:h-[73px]"
-          />
-        </a>
-
-        {/* Icon2 */}
-        <img
-          src={Icon2}
-          alt="Icon 2"
-          className="w-[55px] h-[55px] sm:w-[73px] sm:h-[73px]"
-        />
-      </div>
-    </section>
+      <section
+        className="relative h-[55vh] bg-cover bg-center flex flex-col items-center justify-start pt-4 md:h-[60vh] sm:h-[50vh] footer-section"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+        }}
+      >
+        <FooterContent />
+      </section>
+    </>
   );
 };
 
