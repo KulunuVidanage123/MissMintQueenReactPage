@@ -15,7 +15,9 @@ import JoinNowButton from '../components/join_now_button';
 
 const AboutUs: React.FC = () => {
   return (
-    <section className="relative w-full bg-[#0f6e5fff] pt-20 overflow-x-hidden overflow-visible md:overflow-visible min-h-screen">
+    <section 
+      id="about"
+      className="relative w-full bg-[#0f6e5fff] pt-20 overflow-x-hidden overflow-visible md:overflow-visible min-h-screen">
 
       {/* MOBILE VIEW */}
       <div className="flex flex-col items-center text-center md:hidden relative z-10 h-screen overflow-hidden">
@@ -72,13 +74,13 @@ const AboutUs: React.FC = () => {
               href="https://t.me/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
+              className="inline-block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
             >
               <img src={TelegramIcon} alt="Telegram" className="w-[60px] h-[60px]" />
             </a>
             <button
               type="button"
-              className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none"
+              className="inline-block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none"
             >
               <img src={Icon1} alt="Icon 1" className="w-[60px] h-[60px]" />
             </button>
@@ -86,13 +88,13 @@ const AboutUs: React.FC = () => {
               href="https://twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
+              className="inline-block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
             >
               <img src={XIcon} alt="X (Twitter)" className="w-[60px] h-[60px]" />
             </a>
             <button
               type="button"
-              className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none"
+              className="inline-block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none"
             >
               <img src={Icon2} alt="Icon 2" className="w-[60px] h-[60px]" />
             </button>
@@ -135,16 +137,16 @@ const AboutUs: React.FC = () => {
         </div>
 
         <div className="absolute top-[420px] left-[320px] flex items-center space-x-4">
-          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1">
+          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="inline-block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1">
             <img src={TelegramIcon} alt="Telegram" className="w-[70px] h-[70px]" />
           </a>
-          <button type="button" className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none">
+          <button type="button" className="inline-block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none">
             <img src={Icon1} alt="Icon 1" className="w-[70px] h-[70px]" />
           </button>
-          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1">
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="inline-block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1">
             <img src={XIcon} alt="X (Twitter)" className="w-[70px] h-[70px]" />
           </a>
-          <button type="button" className="transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none">
+          <button type="button" className="inline-block transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1 focus:outline-none">
             <img src={Icon2} alt="Icon 2" className="w-[70px] h-[70px]" />
           </button>
         </div>

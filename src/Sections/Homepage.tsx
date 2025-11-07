@@ -8,7 +8,9 @@ import Logos from '../components/Logos';
 
 const Homepage: React.FC = () => {
   return (
-    <section className="relative w-full h-[140vh] lg:h-[100vh] min-h-[100vh]">
+    <section
+      id="tokenomics" 
+      className="relative w-full h-[140vh] lg:h-[100vh] min-h-[100vh]">
       {/* Background for desktop/tablet */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block"

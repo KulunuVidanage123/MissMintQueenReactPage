@@ -10,7 +10,9 @@ import flower3 from '../assets/flower3.png';
 
 const Cards: React.FC = () => {
   return (
-    <section className="relative w-full overflow-hidden min-h-[65vh] md:min-h-[70vh]">
+    <section 
+      id="how-to-buy"
+      className="relative w-full overflow-hidden min-h-[65vh] md:min-h-[70vh]">
       {/* Mobile Background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"

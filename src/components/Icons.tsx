@@ -11,15 +11,14 @@ const Icons: React.FC = () => {
         <img
           src={Icon1}
           alt="Icon 1"
-          className="w-[73px] h-[73px]"
+          className="w-[73px] h-[73px] transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
         />
         <img
           src={Icon2}
           alt="Icon 2"
-          className="w-[73px] h-[73px]"
+          className="w-[73px] h-[73px] transition-transform duration-300 ease-out hover:scale-110 hover:-translate-y-1"
         />
       </div>
-      
     </div>
   );
 };

@@ -42,6 +42,7 @@ const Footer: React.FC = () => {
       </style>
 
       <section
+        id="contract"
         className="relative h-[55vh] bg-cover bg-center flex flex-col items-center justify-start pt-4 md:h-[60vh] sm:h-[50vh] footer-section"
         style={{
           backgroundImage: `url(${bgImage})`,
