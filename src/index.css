@@ -10,7 +10,6 @@
   font-display: swap;
 }
 
-
 @keyframes slide-seamless {
   0% {
     transform: translateX(0) translateY(-50%);
@@ -31,4 +30,20 @@
   #how-to-buy {
     min-height: 120vh !important;
   }
+}
+
+@keyframes jiggle {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-2px) rotate(-2deg);
+  }
+  75% {
+    transform: translateX(2px) rotate(2deg);
+  }
+}
+
+.animate-jiggle {
+  animation: jiggle 0.8s ease-in-out infinite;
 }

@@ -20,14 +20,14 @@ const Slider: React.FC = () => {
         <img
           src={Queen1}
           alt="Queen"
-          className="absolute left-40 top-1/2 transform -translate-y-1/2 w-auto h-[650px] xl:h-[850px] max-w-full"
+          className="absolute left-40 top-1/2 transform -translate-y-1/2 w-auto h-[650px] xl:h-[850px] max-w-full animate-pulse"
         />
 
         <div className="absolute top-10 right-40 flex flex-col items-end xl:left-[700px] xl:top-24">
           <img
             src={QuestText}
             alt="Quest Text"
-            className="w-[1000px] h-[260px] xl:w-[1400px] xl:h-[350px] object-contain"
+            className="w-[1000px] h-[260px] xl:w-[1400px] xl:h-[350px] object-contain animate-jiggle"
           />
           <ParagraphText />
         </div>
@@ -51,7 +51,7 @@ const Slider: React.FC = () => {
         <img
           src={QuestText}
           alt="Quest Text"
-          className="w-[90%] max-w-[600px] h-auto object-contain"
+          className="w-[90%] max-w-[600px] h-auto object-contain animate-jiggle"
         />
         <ParagraphText />
         <div className="flex flex-col items-center space-y-6">
@@ -60,7 +60,7 @@ const Slider: React.FC = () => {
         <img
           src={Queen1}
           alt="Queen"
-          className="w-[80%] max-w-[450px] h-auto object-contain mt-4"
+          className="w-[80%] max-w-[450px] h-auto object-contain mt-4 animate-pulse"
         />
       </div>
 

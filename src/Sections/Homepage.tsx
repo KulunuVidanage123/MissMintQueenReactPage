@@ -50,7 +50,7 @@ const Homepage: React.FC = () => {
           <img
             src={Queen3}
             alt="Queen"
-            className="w-[300px] h-auto object-contain"
+            className="w-[300px] h-auto object-contain animate-jiggle"
           />
         </div>
 
@@ -68,7 +68,7 @@ const Homepage: React.FC = () => {
             <img
               src={Queen3}
               alt="Queen"
-              className="w-[250px] h-[350px] object-cover"
+              className="w-[250px] h-[350px] object-cover animate-jiggle"
             />
           </div>
         </div>

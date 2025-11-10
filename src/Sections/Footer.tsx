@@ -38,6 +38,11 @@ const Footer: React.FC = () => {
               height: 68vh !important;
             }
           }
+          @media (min-width: 1920px) {
+            .footer-section {
+              height: 65vh !important;
+            }
+          }
         `}
       </style>
 

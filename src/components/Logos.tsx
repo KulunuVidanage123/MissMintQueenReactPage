@@ -18,10 +18,24 @@ const Logos: React.FC = () => {
             transform: scale(1.15);
             filter: brightness(1.3);
           }
+
+          /* ↓↓↓ Apply both size reduction & upward shift for screens ≤ 400px ↓↓↓ */
+          @media (max-width: 400px) {
+            .partner-logo {
+              height: 60px !important;
+              width: auto !important;
+            }
+
+            .partners-container {
+              transform: scale(0.8);
+              position: relative;
+              top: -40px; /* Moves section upward */
+            }
+          }
         `}
       </style>
 
-      <div className="text-center">
+      <div className="text-center partners-container">
         {/* "Partners" title */}
         <h2
           className="text-white font-bold text-[18px] md:text-[30px] mb-2 md:mb-6"

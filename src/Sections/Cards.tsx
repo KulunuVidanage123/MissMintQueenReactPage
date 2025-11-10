@@ -61,18 +61,28 @@ const Cards: React.FC = () => {
           <img
             src={flower1}
             alt="Flower1"
-            className="w-[220px] h-auto object-contain max-[440px]:w-[160px]"
+            className="flower-pair w-[220px] h-auto object-contain max-[440px]:w-[160px]"
           />
           <img
             src={flower2}
             alt="Flower2"
-            className="w-[220px] h-auto object-contain max-[440px]:w-[160px]"
+            className="flower-pair w-[220px] h-auto object-contain max-[440px]:w-[160px]"
           />
         </div>
       </div>
+
+      <style>
+        {`
+          @media (max-width: 342px) {
+            .flower-pair {
+              display: none !important;
+            }
+          }
+        `}
+      </style>
       
     </section>
   );
 };
 
-export default Cards;    
+export default Cards;
