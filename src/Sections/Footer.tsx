@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
           }
           @media (min-width: 1920px) {
             .footer-section {
-              height: 65vh !important;
+              height: 55vh !important;
             }
           }
         `}
